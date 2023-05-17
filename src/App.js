@@ -6,6 +6,7 @@ import store from './store'
 import Layout from "./hocks/Layout";
 
 import Home from "./containers/Home/Home";
+import Profile from "./containers/Profile/Profile";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </Layout>
     </Provider>

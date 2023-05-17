@@ -6,7 +6,9 @@ import {
 } from './types'
 
 
-export const load_profile_list = () => async dispatch => {
+export const load_profile_list = (
+            p_username,
+        ) => async dispatch => {
     const config = {
         headers: {
             'Accept': 'application/json',
@@ -14,15 +16,21 @@ export const load_profile_list = () => async dispatch => {
         }
     }
 
+    const body = JSON.stringify({
+        'withCredentials': true,
+        p_username,
+    })
+
     try {
         const response = await axios
                 .get(`${process.env.REACT_APP_API_URL}/account/list/`,
+                body,
                 config
              )
+        console.log(response)
         if (response.data.error) {
             dispatch({
                 type: PROFILES_LIST_FAIL,
-                payload: response.data
             })
         } else {
             dispatch({
