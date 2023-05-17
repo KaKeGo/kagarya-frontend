@@ -1,8 +1,0 @@
-//Auth Dispatch States
-export const REGISTER_SUCCESS = 'REGISTER_SUCCESS'
-export const REGISTER_FAIL = 'REGISTER_FAIL'
-
-
-//Profile
-export const PROFILES_LIST_SUCCESS = 'PROFILES_LIST_SUCCESS'
-export const PROFILES_LIST_FAIL = 'PROFILES_LIST_FAIL'
