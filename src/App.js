@@ -1,13 +1,14 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
-import Layout from "./hocks/Layout";
+import Layout from "./layout/Layout";
 
 import Home from "./containers/Home/Home";
 import Profile from "./containers/Profile/Profile";
 
 
 function App() {
+
   return (
       <Layout>
         <Routes>
